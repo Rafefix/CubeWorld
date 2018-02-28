@@ -26,6 +26,9 @@ int main(int argc, char* argv[]) {
 	rect.w = 40;
 	}
 
+	int xdir = 1;
+	int ydir = 1;
+
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
 		cout << "SDL could not initialize! SDL_Error: " << SDL_GetError() << endl;
@@ -55,23 +58,22 @@ int main(int argc, char* argv[]) {
 				}
 			}
 
-			rect.x = 0;
-			rect.y = 0;
+			rect.x = 1;
+			rect.y = 1;
 
 
 			while (rect.x <= 600 && rect.y <= 440 && rect.x >= 0 && rect.y >= 0) {
 
-				rect.y++;
+				rect.y = rect.y + 1 * ydir;
 
-				if (rect.y == 440) {
-
-					while (rect.y > 0)
-						rect.y--;
+				if (rect.y == 440 || rect.y == 0) {
+					ydir *= -1;
 				}
-				rect.x++;
-				if (rect.x == 600) {
-					while (rect.x > 0)
-						rect.x--;
+
+				rect.x = rect.x + 1 * xdir;
+
+				if (rect.x == 600 || rect.x == 0) {
+					xdir *= -1;
 				}
 
 				
@@ -89,7 +91,7 @@ int main(int argc, char* argv[]) {
 
 				SDL_RenderPresent(Cube);
 
-				SDL_Delay(5);
+				SDL_Delay(2);
 			}
 
 			
