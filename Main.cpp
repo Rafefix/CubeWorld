@@ -59,7 +59,7 @@ int main(int argc, char* argv[]) {
 			rect.y = 0;
 
 
-			while (rect.x <= 600 && rect.y <= 440 && rect.x >= 0 &rect.y >= 0) {
+			while (rect.x <= 600 && rect.y <= 440 && rect.x >= 0 && rect.y >= 0) {
 
 				rect.y++;
 
