@@ -64,13 +64,13 @@ int main(int argc, char* argv[]) {
 
 			while (rect.x <= 600 && rect.y <= 440 && rect.x >= 0 && rect.y >= 0) {
 
-				rect.y = rect.y + 1 * ydir;
+				rect.y = rect.y + ydir;
 
 				if (rect.y == 440 || rect.y == 0) {
 					ydir *= -1;
 				}
 
-				rect.x = rect.x + 1 * xdir;
+				rect.x = rect.x + xdir;
 
 				if (rect.x == 600 || rect.x == 0) {
 					xdir *= -1;
