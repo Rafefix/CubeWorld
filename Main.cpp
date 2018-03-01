@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
 
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
-		cout << "SDL could not initialize! SDL_Error: " << SDL_GetError() << endl;
+	
 	}
 	else
 	{
@@ -40,7 +40,7 @@ int main(int argc, char* argv[]) {
 
 		if (window == NULL)
 		{
-			cout << "Window could not be created! SDL_Error: " << SDL_GetError() << endl;
+		
 		}
 		else
 		{
@@ -51,12 +51,7 @@ int main(int argc, char* argv[]) {
 
 		
 		while (1) {
-			SDL_Event e;
-			if (SDL_PollEvent(&e)) {
-				if (e.type == SDL_QUIT) {
-					break;
-				}
-			}
+
 
 			rect.x = 1;
 			rect.y = 1;
@@ -77,15 +72,11 @@ int main(int argc, char* argv[]) {
 				}
 
 				
-
-
-				
-
-				SDL_SetRenderDrawColor(Cube, 0x00, 0x00, 0xFF, 0x00);
+				SDL_SetRenderDrawColor(Cube, 0, 0, 255, 0x00);
 
 				SDL_RenderClear(Cube);
 
-				SDL_SetRenderDrawColor(Cube, 0xFF, 0x00, 0x00, 0x00);
+				SDL_SetRenderDrawColor(Cube, 255, 0, 0, 0);
 
 				SDL_RenderFillRect(Cube, &rect);
 
