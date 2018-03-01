@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CubeWorld", "CubeWorld\CubeWorld.vcxproj", "{3B10E7C5-80B3-491D-BA10-D56982251205}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CubeWorld", "CubeWorld.vcxproj", "{3B10E7C5-80B3-491D-BA10-D56982251205}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9E10E931-885A-471B-8088-591B120CFE57}
+		SolutionGuid = {349B693C-02E5-4C0B-8259-CE91D7520EA8}
 	EndGlobalSection
 EndGlobal

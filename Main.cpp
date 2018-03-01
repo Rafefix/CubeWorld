@@ -64,13 +64,13 @@ int main(int argc, char* argv[]) {
 
 			while (rect.x <= 600 && rect.y <= 440 && rect.x >= 0 && rect.y >= 0) {
 
-				rect.y = rect.y + ydir;
+				rect.y += ydir;
 
 				if (rect.y == 440 || rect.y == 0) {
 					ydir *= -1;
 				}
 
-				rect.x = rect.x + xdir;
+				rect.x += xdir;
 
 				if (rect.x == 600 || rect.x == 0) {
 					xdir *= -1;
@@ -91,7 +91,7 @@ int main(int argc, char* argv[]) {
 
 				SDL_RenderPresent(Cube);
 
-				SDL_Delay(2);
+				SDL_Delay(1);
 			}
 
 			
@@ -99,14 +99,8 @@ int main(int argc, char* argv[]) {
 		
 	}
 
-
+	SDL_DestroyWindow(window);
+	SDL_Quit();
 
 	return 0;
 }
-/*
-void Plus(int* rec) {
-	*rec++;
-}
-void Minus(int* rec) {
-	*rec--;
-}*/
